@@ -32,11 +32,11 @@ if (!node || node->parent)
 return (NULL);
 if (binary_tree_is_full(node->parent) == 1)
 {
-if (!node->left)
-return (node->right);
+if ((node->parent->left))
+return (node->parent->right);
 else
 {
-return (node->right);
+return (node->parent->left);
 }
 }
 return (NULL);
